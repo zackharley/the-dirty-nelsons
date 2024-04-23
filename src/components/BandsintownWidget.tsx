@@ -4,10 +4,7 @@ import { Fragment } from 'react';
 export default function BandsintownWidget() {
   return (
     <Fragment>
-      <Script
-        charSet="utf-8"
-        src="https://widgetv3.bandsintown.com/main.min.js"
-      />
+      <Script src="https://widgetv3.bandsintown.com/main.min.js" />
       <a
         className="bit-widget-initializer"
         data-artist-name="id_15523621"
@@ -56,7 +53,7 @@ export default function BandsintownWidget() {
         data-event-rsvp-cta-border-color="rgba(241,236,199,1)"
         data-event-rsvp-cta-border-width="1px"
         data-event-rsvp-cta-border-radius="0px"
-        data-follow-section-position="top"
+        data-follow-section-position="hidden"
         data-follow-section-alignment="center"
         data-follow-section-header-text="Get updates on new shows, new music, and more."
         data-follow-section-cta-size="medium"
@@ -69,7 +66,7 @@ export default function BandsintownWidget() {
         data-follow-section-cta-border-radius="0px"
         data-play-my-city-position="bottom"
         data-play-my-city-alignment="center"
-        data-play-my-city-header-text="Don’t see a show near you?"
+        data-play-my-city-header-text="Don't see a show near you?"
         data-play-my-city-cta-size="medium"
         data-play-my-city-cta-text="REQUEST A SHOW"
         data-play-my-city-cta-icon="true"

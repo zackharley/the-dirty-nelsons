@@ -1,13 +1,15 @@
+import Link from 'next/link';
 import type { PropsWithChildren } from 'react';
 
 interface BaseButton extends PropsWithChildren {
+  className?: string;
   color?: string;
 }
 
 interface ButtonWithHref extends BaseButton {
   href: string;
-  rel: string;
-  target: string;
+  rel?: string;
+  target?: string;
 }
 
 interface ButtonWithOnClick extends BaseButton {
@@ -17,13 +19,14 @@ interface ButtonWithOnClick extends BaseButton {
 export default function Button(props: ButtonWithHref | ButtonWithOnClick) {
   const isAnchor = 'href' in props;
   const color = props.color ?? 'cream';
-  const accentColor = color === 'cream' ? 'black' : 'cream';
   const actualProps = {
     ...props,
-    className: `border border-solid border-${color} px-4 py-2 hover:bg-${color} hover:text-${accentColor} transition-colors duration-200 ease-in-out`,
+    className: `border border-solid border-${color} px-4 py-2 hover:opacity-75 ${props.className}`,
   };
   if (isAnchor) {
-    return <a {...actualProps}>{props.children}</a>;
+    return <Link {...(actualProps as ButtonWithHref)}>{props.children}</Link>;
   }
-  return <button {...actualProps}>{props.children}</button>;
+  return (
+    <button {...(actualProps as ButtonWithOnClick)}>{props.children}</button>
+  );
 }
