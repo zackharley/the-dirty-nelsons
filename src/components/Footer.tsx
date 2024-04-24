@@ -36,7 +36,7 @@ export default function Footer() {
             {socials.map(({ icon, url }) => (
               <a
                 className="transform transition-transform duration-200 hover:scale-110"
-                href="https://open.spotify.com/artist/7kr2klU4GK0wYxjXWuGmbE?si=g_A-F9UjR1mU5um8-h6hLQ"
+                href={url}
                 target="_blank"
                 rel="noreferrer"
                 key={url}
