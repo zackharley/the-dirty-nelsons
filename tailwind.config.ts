@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         black: '#211C1C',
         cream: '#F1ECC7',
+        orange: '#FFBD59',
       },
       keyframes: {
         'fade-in': {
@@ -25,4 +26,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

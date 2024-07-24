@@ -19,14 +19,14 @@ const navItems: NavItem[] = [
     href: '/#music',
     label: 'Music',
   },
-  {
-    href: '/about',
-    label: 'About',
-  },
-  {
-    href: '/contact',
-    label: 'Contact',
-  },
+  // {
+  //   href: '/about',
+  //   label: 'About',
+  // },
+  // {
+  //   href: '/contact',
+  //   label: 'Contact',
+  // },
 ];
 
 export default function Header() {

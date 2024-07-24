@@ -15,7 +15,7 @@ export default function Footer() {
           <iframe
             src="https://embeds.beehiiv.com/900a6e26-2631-4723-9a5d-4101b73e47eb?slim=true"
             data-test-id="beehiiv-embed"
-            height="52"
+            height="75"
             style={{
               margin: 0,
               borderRadius: '0px !important',

@@ -9,8 +9,8 @@ import { albums, theDirtyNelsonsEP } from '@/data/music';
 import PageSection from '@/components/PageSection';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
 import AlbumCard from '@/components/AlbumCard';
+import Image from 'next/image';
 
 export default function Home() {
   const [isListenModalOpen, setIsListenModalOpen] = useState(false);
@@ -22,7 +22,13 @@ export default function Home() {
         onClose={() => setIsListenModalOpen(false)}
       />
       <div className="fixed w-full aspect-[16/9] z-0">
-        <img className="w-full" src="/img/background.jpeg" />
+        <Image
+          className="w-full"
+          src="/img/background.jpeg"
+          height={2359}
+          width={4192}
+          alt="The Dirty Nelsons"
+        />
       </div>
       <Header />
       <main className="relative z-10">
@@ -36,10 +42,7 @@ export default function Home() {
               <p className="text-center text-4xl font-bold drop-shadow-md">
                 DEBUT EP OUT NOW
               </p>
-              <Button
-                className="drop-shadow-md"
-                href="#music"
-              >
+              <Button className="drop-shadow-md" href="#music">
                 Listen Now
               </Button>
             </div>
@@ -53,11 +56,11 @@ export default function Home() {
           </a>
         </div>
 
-        <PageSection title="Shows" id="shows">
+        <PageSection title="Shows" id="shows" borderFill="orange">
           <BandsintownWidget />
         </PageSection>
 
-        <PageSection title="Music" id="music">
+        <PageSection title="Music" id="music" color="orange" borderFill="cream">
           <div className="flex flex-col items-center gap-y-4 mt-4">
             {albums.map((album) => (
               <AlbumCard key={album.name} album={album} />
