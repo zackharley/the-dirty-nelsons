@@ -9,8 +9,10 @@ import { albums, theDirtyNelsonsEP } from '@/data/music';
 import PageSection from '@/components/PageSection';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
 import AlbumCard from '@/components/AlbumCard';
+import Image from 'next/image';
+import backgroundDesktopImage from '../../public/img/background.webp';
+import backgroundMobileImage from '../../public/img/band.webp';
 
 export default function Home() {
   const [isListenModalOpen, setIsListenModalOpen] = useState(false);
@@ -21,25 +23,43 @@ export default function Home() {
         isOpen={isListenModalOpen}
         onClose={() => setIsListenModalOpen(false)}
       />
-      <div className="fixed w-full aspect-[16/9] z-0">
-        <img className="w-full" src="/img/background.jpeg" />
+      <div className="fixed w-full aspect-[3/4] md:aspect-[16/9] z-0">
+        <Image
+          className="hidden md:block"
+          layout="fill"
+          src={backgroundDesktopImage}
+          quality="100"
+          alt="The Dirty Nelsons band members"
+          priority
+        />
+        <Image
+          className="block md:hidden opacity-40"
+          layout="fill"
+          src={backgroundMobileImage}
+          objectFit="cover"
+          objectPosition="bottom"
+          quality="100"
+          alt="The Dirty Nelsons band members"
+          priority
+        />
       </div>
       <Header />
       <main className="relative z-10">
-        <div className="hero flex flex-col items-center justify-between p-y-28 aspect-[16/9] relative">
+        <div className="hero flex flex-col items-center justify-between aspect-[3/4] md:aspect-[16/9] relative">
           <div className="flex flex-col items-center justify-center pt-[24%]">
             <img
               className="w-[70%]  max-h-[80%] animate-fade-in drop-shadow-md"
               src="/img/logo-cream.svg"
+              alt="The Dirty Nelsons logo"
             />
-            <div className="flex flex-col items-center gap-y-2 mt-4">
-              <p className="text-center text-4xl font-bold drop-shadow-md">
-                DEBUT EP OUT NOW
+            <div className="flex flex-col items-center gap-y-2 mt-4 text-[rgba(241,236,199, 0.8)]">
+              <p className="text-center text-xl font-bold drop-shadow-md">
+                NEW SINGLE
               </p>
-              <Button
-                className="drop-shadow-md"
-                href="#music"
-              >
+              <p className="text-center text-4xl font-bold drop-shadow-md">
+                I TAKE YOU WAIT
+              </p>
+              <Button className="drop-shadow-md" href="#music">
                 Listen Now
               </Button>
             </div>
@@ -59,7 +79,7 @@ export default function Home() {
 
         <PageSection title="Music" id="music">
           <div className="flex flex-col items-center gap-y-4 mt-4">
-            {albums.map((album) => (
+            {albums.map(album => (
               <AlbumCard key={album.name} album={album} />
             ))}
           </div>

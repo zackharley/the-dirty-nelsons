@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-[#211C1C] text-[#F1ECC7] font-special">
       <body className={specialElite.className}>{children}</body>
       <GoogleAnalytics gaId="G-LX1WFLZ6WF" />
     </html>

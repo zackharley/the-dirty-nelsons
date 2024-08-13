@@ -1,8 +1,9 @@
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
+import type { StaticImageData } from 'next/image';
 
 export type Album = {
   name: string;
-  cover: string;
+  cover: StaticImageData;
   releaseDate: Date;
   links: {
     itunes: string;

@@ -3,7 +3,6 @@ import type { PropsWithChildren } from 'react';
 
 interface BaseButton extends PropsWithChildren {
   className?: string;
-  color?: string;
 }
 
 interface ButtonWithHref extends BaseButton {
@@ -18,10 +17,9 @@ interface ButtonWithOnClick extends BaseButton {
 
 export default function Button(props: ButtonWithHref | ButtonWithOnClick) {
   const isAnchor = 'href' in props;
-  const color = props.color ?? 'cream';
   const actualProps = {
     ...props,
-    className: `border border-solid border-${color} px-4 py-2 hover:opacity-75 ${props.className}`,
+    className: `border border-solid border-cream px-4 py-2 hover:opacity-75 ${props.className}`,
   };
   if (isAnchor) {
     return <Link {...(actualProps as ButtonWithHref)}>{props.children}</Link>;
