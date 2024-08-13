@@ -38,8 +38,8 @@ export default function AboutPage() {
                 Hailing from Toronto, Canada, The Dirty Nelsons is the
                 beer-fueled passion project of Matt, Colin, Lucas, Hayden, and
                 Zack. Brought together by a passion for raw, unfiltered
-                rock'n'roll, The Dirty Nelsons have blasted their way from
-                bedroom jams onto the local scene with unforgettable,
+                rock&apos;n&apos;roll, The Dirty Nelsons have blasted their way
+                from bedroom jams onto the local scene with unforgettable,
                 electrifying performances.
               </p>
               <br />
