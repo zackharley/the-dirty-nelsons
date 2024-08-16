@@ -11,7 +11,7 @@ export default function ContactPage() {
       <Header />
       <div className="py-6 md:py-20">
         <PageSection title="Contact">
-          <div className="mt-4 md:mt-10 mx-4 flex flex-col items-center md:items-start md:flex-row gap-4 md:gap-8 text-center">
+          <div className="mt-4 md:mt-10 mx-4 flex flex-col items-center gap-4 md:gap-8 text-center">
             <Image
               src={contactImage}
               placeholder="blur"

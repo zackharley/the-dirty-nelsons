@@ -28,6 +28,10 @@ const navItems: NavItem[] = [
     label: 'Shows',
   },
   {
+    href: 'https://merch.thedirtynelsons.com',
+    label: 'Store',
+  },
+  {
     href: '/#music',
     label: 'Music',
   },
@@ -43,6 +47,10 @@ const navItems: NavItem[] = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navItemsToDisplay = navItems.filter(
+    ({ showOnDesktop }) =>
+      showOnDesktop === undefined || showOnDesktop === true,
+  );
   return (
     <>
       <header className="hidden md:flex flex-row items-center px-16 absolute top-0 h-16 w-full bg-[#211c1c9e] z-[1000]">
@@ -56,19 +64,14 @@ export default function Header() {
         </Link>
         <div className="w-6 h-[1px] bg-[#F1ECC7] mx-4" />
         <nav className="flex flex-row gap-x-3 mt-2">
-          {navItems
-            .filter(
-              ({ showOnDesktop }) =>
-                showOnDesktop === undefined || showOnDesktop === true,
-            )
-            .map(({ href, label }, index) => (
-              <Fragment key={label}>
-                <Link href={href} className="hover:underline decoration-dashed">
-                  {label}
-                </Link>
-                {index < navItems.length - 1 && <span>•</span>}
-              </Fragment>
-            ))}
+          {navItemsToDisplay.map(({ href, label }, index) => (
+            <Fragment key={label}>
+              <Link href={href} className="hover:underline decoration-dashed">
+                {label}
+              </Link>
+              {index < navItemsToDisplay.length - 1 && <span>•</span>}
+            </Fragment>
+          ))}
         </nav>
         <div className="flex-grow h-[1px] bg-[#F1ECC7] mx-4" />
         <div className="max-w-5xl flex flex-row gap-x-4">
