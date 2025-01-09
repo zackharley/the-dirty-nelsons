@@ -90,7 +90,7 @@ export default function Home() {
 
         <PageSection title="Music" id="music">
           <div className="grid grid-cols-2 gap-4 md:gap-20 mt-5">
-            {albums.map(album => (
+            {albums.map((album) => (
               <AlbumCard key={album.name} album={album} />
             ))}
           </div>

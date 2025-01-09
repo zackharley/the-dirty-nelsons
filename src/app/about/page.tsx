@@ -8,6 +8,7 @@ import hadyenImage from '../../../public/img/hayden.webp';
 import colinPatImage from '../../../public/img/colin-pat.webp';
 import lucasMattImage from '../../../public/img/lucas-matt.webp';
 import lucasZackStudioImage from '../../../public/img/lucas-zack-studio.webp';
+import type { PropsWithChildren } from 'react';
 
 export default function AboutPage() {
   return (
@@ -36,44 +37,40 @@ export default function AboutPage() {
             <div className="text-center md:text-left">
               <p>
                 Hailing from Toronto, Canada, The Dirty Nelsons is the
-                beer-fueled passion project of Matt, Colin, Lucas, Hayden, and
-                Zack. Brought together by a passion for raw, unfiltered
-                rock&apos;n&apos;roll, The Dirty Nelsons have blasted their way
-                from bedroom jams onto the local scene with unforgettable,
-                electrifying performances.
+                beer-fueled passion project of Matt Carter, Colin MacLeod, Lucas
+                Manuel, Hayden Estabrook, and Zack Harley. What started as
+                late-night jam sessions has turned into a raw, unfiltered rock
+                band that&apos;s carved out a place in the local scene with
+                unforgettable, high-energy shows.
               </p>
               <br />
               <p>
-                Fresh off the heels of their huge 2022 One Night Stand Tour, The
-                Dirty Nelsons released their{' '}
-                <Link href="/#music">
-                  <span className="border-b border-dashed border-cream hover:opacity-75">
-                    debut self-titled EP
-                  </span>
-                </Link>{' '}
-                in August 2023 along with a sold-out EP release show at The
-                Rivoli in downtown Toronto.
+                Fresh off the heels of their 2022 One Night Stand
+                &quot;Tour&quot;, The Dirty Nelsons released their{' '}
+                <AboutLink href="/#music">debut self-titled EP</AboutLink> in
+                August 2023 along with a sold-out EP release show at The Rivoli
+                in downtown Toronto.
               </p>
               <br />
               <p>
-                Now its 2024 and The Dirty Nelsons are back and better than ever
-                with the release of their newest single{' '}
-                <Link href="/#music">
-                  <span className="border-b border-dashed border-cream hover:opacity-75">
-                    I Take You Wait
-                  </span>
-                </Link>{' '}
-                and an encore performance at The Rivoli set to take place on
-                August 24th, 2024.
+                In 2024, The Dirty Nelsons followed that up with the release of
+                their newest single{' '}
+                <AboutLink href="/#music">I Take You Wait</AboutLink> and an
+                encore performance at The Rivoli on August 24th, 2024.
+              </p>
+              <br />
+              <p>
+                At the beginning of 2025, The Dirty Nelsons released{' '}
+                <AboutLink href="/#video">a music video</AboutLink> for I Take
+                You Wait featuring live footage from their 2024 show at The
+                Rivoli.
               </p>
               <hr className="border-1 border-dashed border-cream my-6" />
               <p>
                 Want to get in touch? Email us at{' '}
-                <Link href="mailto:band@thedirtynelsons.com">
-                  <span className="border-b border-dashed border-cream hover:opacity-75">
-                    band@thedirtynelsons.com
-                  </span>
-                </Link>{' '}
+                <AboutLink href="mailto:band@thedirtynelsons.com">
+                  band@thedirtynelsons.com
+                </AboutLink>{' '}
                 for booking, press, or just to say hi!
               </p>
             </div>
@@ -112,5 +109,20 @@ export default function AboutPage() {
       </div>
       <Footer />
     </div>
+  );
+}
+
+function AboutLink({
+  href,
+  children,
+}: {
+  href: string;
+} & PropsWithChildren) {
+  return (
+    <Link href={href}>
+      <span className="border-b border-dashed border-cream hover:opacity-75">
+        {children}
+      </span>
+    </Link>
   );
 }
