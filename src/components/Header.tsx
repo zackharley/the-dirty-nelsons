@@ -90,12 +90,7 @@ export default function Header() {
         </div>
       </header>
       <header className="flex md:hidden flex-row items-center px-4 absolute top-0 h-12 w-full bg-[#211c1c9e] z-[1000]">
-        <Image
-          height={32}
-          width={32}
-          src="/img/icon-cream.svg"
-          alt="The Dirty Nelsons"
-        />
+        <Image height={32} width={32} src={iconCream} alt="The Dirty Nelsons" />
         <div className="flex-grow h-[1px] bg-[#F1ECC7] mx-4" />
         <FontAwesomeIcon
           icon={faBars}
