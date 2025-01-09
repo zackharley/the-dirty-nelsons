@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   title: 'The Dirty Nelsons',
   description:
     "The official website of The Dirty Nelsons. Debut EP 'THE DIRTY NELSONS' out now!",
-  metadataBase: new URL('https://thedirtynelsons.com'),
 };
 
 export default function RootLayout({
