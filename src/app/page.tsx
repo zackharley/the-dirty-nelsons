@@ -54,13 +54,13 @@ export default function Home() {
             />
             <div className="flex flex-col items-center gap-y-2 mt-4 text-[rgba(241,236,199, 0.8)]">
               <p className="text-center text-xl font-bold drop-shadow-md">
-                NEW SINGLE
+                NEW MUSIC VIDEO
               </p>
               <p className="text-center text-4xl font-bold drop-shadow-md">
                 I TAKE YOU WAIT
               </p>
-              <Button className="drop-shadow-md" href="#music">
-                Listen Now
+              <Button className="drop-shadow-md" href="#video">
+                Watch Now
               </Button>
             </div>
           </div>
@@ -77,8 +77,19 @@ export default function Home() {
           <BandsintownWidget />
         </PageSection>
 
+        <PageSection title="Video" id="video">
+          <iframe
+            className="w-full aspect-video mt-5"
+            src="https://www.youtube.com/embed/sWF8mcXpLME?si=EVZbNpyh2cJMmaNY&amp;vq=hd1080"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </PageSection>
+
         <PageSection title="Music" id="music">
-          <div className="flex flex-col items-center gap-y-4 mt-4">
+          <div className="grid grid-cols-2 gap-4 md:gap-20 mt-5">
             {albums.map(album => (
               <AlbumCard key={album.name} album={album} />
             ))}

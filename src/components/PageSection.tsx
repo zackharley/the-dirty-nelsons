@@ -10,7 +10,7 @@ export default function PageSection({
   return (
     <div
       id={id}
-      className={`flex flex-col items-center bg-${color} pt-8 pb-6 md:pt-16 md:pb-12`}
+      className={`flex flex-col items-center bg-${color} pt-8 pb-6 md:pt-16 md:pb-12 px-4 md:px-16`}
     >
       <div className="max-w-5xl w-full flex flex-col items-stretch">
         <h2

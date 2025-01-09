@@ -6,16 +6,22 @@ import {
   faSpotify,
   faTiktok,
   faTwitter,
+  faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 
 export const socials: SocialConfig[] = [
   {
     icon: faSpotify,
-    url: 'https://open.spotify.com/artist/7kr2klU4GK0wYxjXWuGmbE?si=g_A-F9UjR1mU5um8-h6hLQ',
+    url:
+      'https://open.spotify.com/artist/7kr2klU4GK0wYxjXWuGmbE?si=g_A-F9UjR1mU5um8-h6hLQ',
   },
   {
     icon: faItunes,
     url: 'https://music.apple.com/us/artist/the-dirty-nelsons/1693728666',
+  },
+  {
+    icon: faYoutube,
+    url: 'https://www.youtube.com/@TheDirtyNelsons',
   },
   {
     icon: faInstagram,

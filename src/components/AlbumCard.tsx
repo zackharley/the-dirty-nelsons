@@ -8,16 +8,14 @@ export default function AlbumCard({ album }: { album: Album }) {
   return (
     <div key={album.name} className="flex flex-col items-center gap-y-1">
       <a href={album.links.spotify} rel="noopener noreferrer" target="_blank">
-        <Image
-          height={350}
-          width={350}
-          src={album.cover}
-          alt={album.name}
-          placeholder="blur"
-        />
+        <Image src={album.cover} alt={album.name} placeholder="blur" />
       </a>
-      <p className="text-3xl font-bold mt-2">{album.name}</p>
-      <p className="text-lg">{format(album.releaseDate, 'MMMM d, yyy')}</p>
+      <p className="text-xl md:text-3xl font-bold mt-2 text-center md:text-start">
+        {album.name}
+      </p>
+      <p className="text-sm md:text-lg text-center md:text-start">
+        {format(album.releaseDate, 'MMMM d, yyy')}
+      </p>
       <div className="flex flex-row gap-x-4 text-[#F1ECC7]">
         <a
           href={album.links.spotify}

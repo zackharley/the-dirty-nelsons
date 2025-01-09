@@ -27,9 +27,13 @@ const navItems: NavItem[] = [
     href: '/#shows',
     label: 'Shows',
   },
+  // {
+  //   href: 'https://merch.thedirtynelsons.com',
+  //   label: 'Store',
+  // },
   {
-    href: 'https://merch.thedirtynelsons.com',
-    label: 'Store',
+    href: '/#video',
+    label: 'Video',
   },
   {
     href: '/#music',
