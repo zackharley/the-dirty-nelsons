@@ -1,6 +1,7 @@
 import { socials } from '@/data/socials';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
+import logoBlack from '@/img/logo-black.svg';
 
 export default function Footer() {
   return (
@@ -16,8 +17,6 @@ export default function Footer() {
             src="https://embeds.beehiiv.com/900a6e26-2631-4723-9a5d-4101b73e47eb?slim=true"
             data-test-id="beehiiv-embed"
             height="52"
-            frameBorder="0"
-            scrolling="no"
             style={{
               margin: '0',
               borderRadius: '0 !important',
@@ -29,7 +28,7 @@ export default function Footer() {
           <Image
             height={96}
             width={275}
-            src="/img/logo-black.svg"
+            src={logoBlack}
             alt="The Dirty Nelsons"
           />
         </div>

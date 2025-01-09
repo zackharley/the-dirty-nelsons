@@ -3,12 +3,12 @@ import Header from '@/components/Header';
 import PageSection from '@/components/PageSection';
 import Image from 'next/image';
 import Link from 'next/link';
-import bandImage from '../../../public/img/band.webp';
-import hadyenImage from '../../../public/img/hayden.webp';
-import colinPatImage from '../../../public/img/colin-pat.webp';
-import lucasMattImage from '../../../public/img/lucas-matt.webp';
-import lucasZackStudioImage from '../../../public/img/lucas-zack-studio.webp';
-import type { PropsWithChildren } from 'react';
+import bandImage from '@/img/band.webp';
+import hadyenImage from '@/img/hayden.webp';
+import colinPatImage from '@/img/colin-pat.webp';
+import lucasMattImage from '@/img/lucas-matt.webp';
+import lucasZackStudioImage from '@/img/lucas-zack-studio.webp';
+import { PropsWithChildren } from 'react';
 
 export default function AboutPage() {
   return (

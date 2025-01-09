@@ -11,8 +11,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AlbumCard from '@/components/AlbumCard';
 import Image from 'next/image';
-import backgroundDesktopImage from '../../public/img/background.webp';
-import backgroundMobileImage from '../../public/img/band.webp';
+import backgroundDesktopImage from '@/img/background.webp';
+import backgroundMobileImage from '@/img/band.webp';
+import logoCream from '@/img/logo-cream.svg';
 
 export default function Home() {
   const [isListenModalOpen, setIsListenModalOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function Home() {
       <div className="fixed w-full aspect-[3/4] md:aspect-[16/9] z-0">
         <Image
           className="hidden md:block"
-          layout="fill"
+          style={{ width: '100%' }}
           src={backgroundDesktopImage}
           quality="100"
           alt="The Dirty Nelsons band members"
@@ -34,7 +35,7 @@ export default function Home() {
         />
         <Image
           className="block md:hidden opacity-40"
-          layout="fill"
+          style={{ width: '100%' }}
           src={backgroundMobileImage}
           objectFit="cover"
           objectPosition="bottom"
@@ -47,9 +48,9 @@ export default function Home() {
       <main className="relative z-10">
         <div className="hero flex flex-col items-center justify-between aspect-[3/4] md:aspect-[16/9] relative">
           <div className="flex flex-col items-center justify-center pt-[24%]">
-            <img
-              className="w-[70%]  max-h-[80%] animate-fade-in drop-shadow-md"
-              src="/img/logo-cream.svg"
+            <Image
+              className="w-[70%] max-h-[80%] animate-fade-in drop-shadow-md"
+              src={logoCream}
               alt="The Dirty Nelsons logo"
             />
             <div className="flex flex-col items-center gap-y-2 mt-4 text-[rgba(241,236,199, 0.8)]">

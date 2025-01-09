@@ -1,15 +1,12 @@
 'use client';
 import { socials } from '@/data/socials';
-import {
-  faBars,
-  faClose,
-  faHamburger,
-} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment, useState } from 'react';
-import logoBlack from '../../public/img/logo-black.svg';
+import logoBlack from '@/img/logo-black.svg';
+import iconCream from '@/img/icon-cream.svg';
 
 type NavItem = {
   label: string;
@@ -62,7 +59,7 @@ export default function Header() {
           <Image
             height={40}
             width={40}
-            src="/img/icon-cream.svg"
+            src={iconCream}
             alt="The Dirty Nelsons"
           />
         </Link>

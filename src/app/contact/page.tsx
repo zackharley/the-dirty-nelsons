@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import PageSection from '@/components/PageSection';
 import Image from 'next/image';
 import Link from 'next/link';
-import contactImage from '../../../public/img/contact.webp';
+import contactImage from '@/img/contact.webp';
 
 export default function ContactPage() {
   return (

@@ -1,7 +1,7 @@
 import { Album } from '@/types/global';
 import { set } from 'date-fns';
-import iTakeYouWaitCover from '../../public/img/music/ityw.webp';
-import theDirtyNelsonsEPCover from '../../public/img/music/tdn-ep.webp';
+import iTakeYouWaitCover from '@/img/music/ityw.webp';
+import theDirtyNelsonsEPCover from '@/img/music/tdn-ep.webp';
 
 export const iTakeYouWaitSingle: Album = {
   name: 'I Take You Wait',
